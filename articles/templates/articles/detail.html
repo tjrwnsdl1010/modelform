@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{article.title}}</h1>
+<p>{{article.content}}</p>
+
+<p>{{article.ceated_at}}</p>
+<p>{{article.updatee_at}}</p>
+
+<a href="{% url 'articles:update' id=article.id %}">update</a>
+<a href="{% url 'articles:delete' id=article.id %}">delete</a>
+{% endblock %}
